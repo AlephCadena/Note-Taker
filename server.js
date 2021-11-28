@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const db = require('./db/db.json ');
+const db = require('./db/db.json');
 const fs = require('fs');
 const { v4: uuidv4 } = require("uuid");
 
@@ -38,7 +38,7 @@ app.post('/api/notes', (req, res) => {
 
         db.push(Notes)
         const arrStr = JSON.stringify(db, null, 2)
-        
+
         fs.writeFile('./db/db.json', arrStr, (err) =>
         err
             ? console.error(err)
